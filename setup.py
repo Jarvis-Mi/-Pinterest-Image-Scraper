@@ -1,12 +1,17 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="auto-pi-download",
+    name="auto_pi_download",
     version="0.1",
     packages=find_packages(),
     install_requires=[
         'playwright',
     ],
+    entry_points={
+        'console_scripts': [
+            'auto_pi_download = auto_pi_download.cli:main',
+        ],
+    },
     description="A simple Pinterest image scraper",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',

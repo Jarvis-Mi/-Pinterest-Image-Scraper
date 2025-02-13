@@ -1,7 +1,7 @@
 # pinterest_scraper/cli.py
 import argparse
 from .scraper import get_image_urls
-from .downloader import auto_pinterest_image_download
+from .downloader import auto_pi_download
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Pinterest Image Scraper")
@@ -22,7 +22,7 @@ def main():
         return
 
     print(f" Number of images found: {len(img_urls)}")
-    auto_pinterest_image_download(img_urls, args.username)
+    auto_pi_download(img_urls, args.username)
     print("\n The image download has finished.")
 
 if __name__ == "__main__":
