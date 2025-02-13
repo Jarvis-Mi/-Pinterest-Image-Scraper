@@ -66,7 +66,6 @@ from pinterest_scraper import get_image_urls, download_images
 pinterest_url = "https://www.pinterest.com/exampleuser/board/"  
 num_images = 10  
 
-# دریافت آدرس‌های تصاویر
 img_urls = get_image_urls(pinterest_url, num_images=num_images)
 
 if not img_urls:
