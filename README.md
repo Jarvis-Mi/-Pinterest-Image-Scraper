@@ -50,15 +50,24 @@ pinterest-scraper exampleuser travel 20 --headless
 ```
 ***This command scrapes and downloads 20 images from the "travel" board of user "exampleuser" in headless mode.***
 
-###   Project Structure :
+### Now that your package has been successfully installed, you can test it by installing it using pip and running a simple script to verify that it works.
+
+## Usage
+**Install the package:**
 ```bash
-pinterest_scraper/
-├── pinterest_scraper/
-│   ├── __init__.py          # Package initialization and metadata
-│   ├── cli.py               # Command-line interface implementation
-│   ├── downloader.py        # Functions for downloading images
-│   └── scraper.py           # Functions for scraping image URLs
-├── setup.py                 # Setup script for packaging and installation
-├── README.md                # Project documentation
-└── LICENSE                  # License file
+pip install auto-pinterest-image-download
+```
+**Test the package:**
+## Once installed, you can test the package by writing a simple script. The package includes a module to download Pinterest images (based on the package name), you can use the following sample code to test it:
+```bash
+# Importing the package (assuming it includes a function to scrape images)
+from auto_pinterest_image_download import PinterestScraper
+
+# Create an instance of the scraper
+scraper = PinterestScraper()
+
+# Example usage: downloading images from a Pinterest board or search term
+scraper.download_images(query="nature", num_images=5)  # Customize query and number of images
+
+print("Download completed.")
 ```
