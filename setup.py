@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="jarvis-mi-pinterest-scraper",
+    name="auto-pinterest-image-download",
     version="0.1",
     packages=find_packages(),
     install_requires=[
