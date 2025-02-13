@@ -55,19 +55,25 @@ pinterest-scraper exampleuser travel 20 --headless
 ## Usage
 **Install the package:**
 ```bash
-pip install auto-pinterest-image-download
+pip install auto-pi-download
 ```
 **Test the package:**
 ## Once installed, you can test the package by writing a simple script. The package includes a module to download Pinterest images (based on the package name), you can use the following sample code to test it:
 ```bash
-# Importing the package (assuming it includes a function to scrape images)
-from auto_pinterest_image_download import PinterestScraper
+from pinterest_scraper import get_image_urls, download_images
 
-# Create an instance of the scraper
-scraper = PinterestScraper()
+# Example usage
+pinterest_url = "https://www.pinterest.com/exampleuser/board/"  
+num_images = 10  
 
-# Example usage: downloading images from a Pinterest board or search term
-scraper.download_images(query="nature", num_images=5)  # Customize query and number of images
+# دریافت آدرس‌های تصاویر
+img_urls = get_image_urls(pinterest_url, num_images=num_images)
 
-print("Download completed.")
+if not img_urls:
+    print("No images found.")
+else:
+    print(f"Found {len(img_urls)} images.")
+    download_images(img_urls, "exampleuser")  
+    print("Download completed.")
+
 ```
