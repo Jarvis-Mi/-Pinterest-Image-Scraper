@@ -3,7 +3,7 @@ from playwright.sync_api import sync_playwright
 import time
 import random
 
-def auto_pi_download(url, num_images=10, scroll_attempts_limit=250):
+def get_image_urls(url, num_images=10, scroll_attempts_limit=250):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True) # You can give headless as an input argument here
         context = browser.new_context()
