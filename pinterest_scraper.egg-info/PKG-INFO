@@ -1,7 +1,0 @@
-Metadata-Version: 2.1
-Name: pinterest_scraper
-Version: 0.1
-Summary: A Pinterest image scraper using Playwright
-Author: نام شما
-License-File: LICENSE
-Requires-Dist: playwright
