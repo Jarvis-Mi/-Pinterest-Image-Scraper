@@ -9,7 +9,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'download_images_from_pinterest = download_images_from_pinterest.cli:main',
+            'download_images_from_pinterest = pinterest_scraper.cli:main',  
         ],
     },
     description="A simple Pinterest image scraper",
