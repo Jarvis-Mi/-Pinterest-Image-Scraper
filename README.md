@@ -23,5 +23,41 @@ A powerful Python tool to scrape and download images from Pinterest using Playwr
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/YourUsername/pinterest_scraper.git
+   git clone https://github.com/Jarvis-Mi/-Pinterest-Image-Scraper.git
    cd pinterest_scraper
+   ‍‍```
+2. **Install dependencies:**
+      ```bash
+         pip install -e .
+         playwright install
+      ```
+##   Usage
+###   Run the scraper using:
+
+**Run the scraper using:**
+```bash
+pinterest-scraper <username> <tag> <num_images> [--headless]
+```
+##   Arguments:
+1. <username>: Pinterest username or profile name.
+2. <tag>: Tag or board name.
+3. <num_images>: Number of images to download.
+4. [--headless]: (Optional) Run the browser in headless mode.
+
+##   Example:
+```bash
+pinterest-scraper exampleuser travel 20 --headless
+```
+***This command scrapes and downloads 20 images from the "travel" board of user "exampleuser" in headless mode.***
+
+###   Project Structure :
+
+pinterest_scraper/
+├── pinterest_scraper/
+│   ├── __init__.py          # Package initialization and metadata
+│   ├── cli.py               # Command-line interface implementation
+│   ├── downloader.py        # Functions for downloading images
+│   └── scraper.py           # Functions for scraping image URLs
+├── setup.py                 # Setup script for packaging and installation
+├── README.md                # Project documentation
+└── LICENSE                  # License file
