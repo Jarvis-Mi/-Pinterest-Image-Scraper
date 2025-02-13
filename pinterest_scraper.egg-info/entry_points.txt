@@ -1,0 +1,2 @@
+[console_scripts]
+pinterest-scraper = pinterest_scraper.cli:main
