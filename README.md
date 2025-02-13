@@ -36,7 +36,7 @@ A powerful Python tool to scrape and download images from Pinterest using Playwr
 
 **Run the scraper using:**
 ```bash
-pinterest-scraper <username> <tag> <num_images> [--headless]
+python  -m pinterest_scraper.cli <username> <tag> <num_images> [--headless]
 ```
 ##   Arguments:
 1. <username>: Pinterest username or profile name.
@@ -46,7 +46,7 @@ pinterest-scraper <username> <tag> <num_images> [--headless]
 
 ##   Example:
 ```bash
-pinterest-scraper exampleuser travel 20 --headless
+python -m pinterest_scraper.cli exampleuser travel 10 --headless
 ```
 ***This command scrapes and downloads 20 images from the "travel" board of user "exampleuser" in headless mode.***
 
@@ -61,8 +61,6 @@ pip install auto-pi-download
 ## Once installed, you can test the package by writing a simple script. The package includes a module to download Pinterest images (based on the package name), you can use the following sample code to test it:
 ```bash
 from pinterest_scraper import get_image_urls, download_images
-
-# Example usage
 pinterest_url = "https://www.pinterest.com/exampleuser/board/"  
 num_images = 10  
 
@@ -74,5 +72,6 @@ else:
     print(f"Found {len(img_urls)} images.")
     download_images(img_urls, "exampleuser")  
     print("Download completed.")
+
 
 ```
